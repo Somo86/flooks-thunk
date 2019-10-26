@@ -1,0 +1,9 @@
+node_nodules
+.cache
+.idea
+src
+example
+.gitignore
+.prettierrc
+rollup.config.js
+tsconfig.json

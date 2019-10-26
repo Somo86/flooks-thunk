@@ -1,17 +1,14 @@
 {
-  "name": "react-redux-hooks",
+  "name": "flooks-thunk",
   "version": "1.0.0",
-  "description": "A little library for manage global state using React Hooks",
+  "description": "Middleware for asyncronous action creators",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
   "types": "dist/index.d.ts",
-  "directories": {
-    "example": "examples"
-  },
   "scripts": {
-    "start": "rollup -c -w",
-    "build": "rollup -c",
+    "start": "rollup -c -w --environment BUILD:development",
+    "build": "rollup -c --environment BUILD:production",
     "prettier": "prettier --config .prettierrc --write \"{src,example}/**/*.{js,ts,tsx}\"",
     "test": "npm run test"
   },
@@ -26,13 +23,11 @@
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-typescript2": "^0.20.1",
     "rollup-plugin-url": "^2.2.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
     "typescript": "^3.3.1"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.4",
-    "react": "^16.8.1"
+    "react": "^16.8.1",
+    "react-flooks": "^1.0.0"
   },
   "files": [
     "dist"
